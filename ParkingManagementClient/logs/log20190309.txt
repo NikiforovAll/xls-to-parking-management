@@ -1,0 +1,63 @@
+2019-03-09 17:02:02.085 +02:00 [FTL] System.Exception: Kabom
+   at ParkingManagementClient.ClientApplication.Run() in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\ClientApplication.cs:line 17
+   at ParkingManagementClient.Program.Main(String[] args) in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\Program.cs:line 19
+2019-03-09 17:54:17.342 +02:00 [FTL] System.NullReferenceException: Object reference not set to an instance of an object.
+   at CommandLine.Core.InstanceBuilder.<>c__DisplayClass0_1`1.<Build>b__16()
+   at CommandLine.Core.InstanceBuilder.<>c__DisplayClass0_0`1.<Build>b__5()
+   at CommandLine.Parser.ParseArguments[T](IEnumerable`1 args)
+   at ParkingManagementClient.ClientApplication.Run(String[] args) in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\ClientApplication.cs:line 23
+   at ParkingManagementClient.Program.Main(String[] args) in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\Program.cs:line 17
+2019-03-09 17:55:15.274 +02:00 [FTL] System.NullReferenceException: Object reference not set to an instance of an object.
+   at CommandLine.Core.InstanceBuilder.<>c__DisplayClass0_1`1.<Build>b__16()
+   at CommandLine.Core.InstanceBuilder.<>c__DisplayClass0_0`1.<Build>b__5()
+   at CommandLine.Parser.ParseArguments[T](IEnumerable`1 args)
+   at ParkingManagementClient.ClientApplication.Run(String[] args) in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\ClientApplication.cs:line 19
+   at ParkingManagementClient.Program.Main(String[] args) in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\Program.cs:line 17
+2019-03-09 17:59:15.169 +02:00 [FTL] System.NullReferenceException: Object reference not set to an instance of an object.
+   at CommandLine.Core.InstanceBuilder.<>c__DisplayClass0_1`1.<Build>b__16()
+   at CommandLine.Core.InstanceBuilder.<>c__DisplayClass0_0`1.<Build>b__5()
+   at CommandLine.Parser.ParseArguments[T](IEnumerable`1 args)
+   at ParkingManagementClient.ClientApplication.Run(String[] args) in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\ClientApplication.cs:line 19
+   at ParkingManagementClient.Program.Main(String[] args) in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\Program.cs:line 17
+2019-03-09 18:03:08.093 +02:00 [FTL] System.NullReferenceException: Object reference not set to an instance of an object.
+   at CommandLine.Core.InstanceBuilder.<>c__DisplayClass0_1`1.<Build>b__16()
+   at CommandLine.Core.InstanceBuilder.<>c__DisplayClass0_0`1.<Build>b__5()
+   at CommandLine.Parser.ParseArguments[T](IEnumerable`1 args)
+   at ParkingManagementClient.ClientApplication.Run(String[] args) in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\ClientApplication.cs:line 19
+   at ParkingManagementClient.Program.Main(String[] args) in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\Program.cs:line 17
+2019-03-09 18:04:44.434 +02:00 [FTL] System.NullReferenceException: Object reference not set to an instance of an object.
+   at CommandLine.Core.InstanceBuilder.<>c__DisplayClass0_1`1.<Build>b__16()
+   at CommandLine.Core.InstanceBuilder.<>c__DisplayClass0_0`1.<Build>b__5()
+   at CommandLine.Parser.ParseArguments[T](IEnumerable`1 args)
+   at ParkingManagementClient.ClientApplication.Run(String[] args) in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\ClientApplication.cs:line 19
+   at ParkingManagementClient.Program.Main(String[] args) in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\Program.cs:line 17
+2019-03-09 18:05:03.735 +02:00 [FTL] System.NullReferenceException: Object reference not set to an instance of an object.
+   at CommandLine.Core.InstanceBuilder.<>c__DisplayClass0_1`1.<Build>b__16()
+   at CommandLine.Core.InstanceBuilder.<>c__DisplayClass0_0`1.<Build>b__5()
+   at CommandLine.Parser.ParseArguments[T](IEnumerable`1 args)
+   at ParkingManagementClient.ClientApplication.Run(String[] args) in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\ClientApplication.cs:line 19
+   at ParkingManagementClient.Program.Main(String[] args) in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\Program.cs:line 17
+2019-03-09 18:05:18.828 +02:00 [FTL] System.NullReferenceException: Object reference not set to an instance of an object.
+   at CommandLine.Core.InstanceBuilder.<>c__DisplayClass0_1`1.<Build>b__16()
+   at CommandLine.Core.InstanceBuilder.<>c__DisplayClass0_0`1.<Build>b__5()
+   at CommandLine.Parser.ParseArguments[T](IEnumerable`1 args)
+   at ParkingManagementClient.ClientApplication.Run(String[] args) in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\ClientApplication.cs:line 19
+   at ParkingManagementClient.Program.Main(String[] args) in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\Program.cs:line 17
+2019-03-09 18:05:29.642 +02:00 [FTL] System.NullReferenceException: Object reference not set to an instance of an object.
+   at CommandLine.Core.InstanceBuilder.<>c__DisplayClass0_1`1.<Build>b__16()
+   at CommandLine.Core.InstanceBuilder.<>c__DisplayClass0_0`1.<Build>b__5()
+   at CommandLine.Parser.ParseArguments[T](IEnumerable`1 args)
+   at ParkingManagementClient.ClientApplication.Run(String[] args) in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\ClientApplication.cs:line 19
+   at ParkingManagementClient.Program.Main(String[] args) in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\Program.cs:line 17
+2019-03-09 18:07:44.978 +02:00 [FTL] System.NullReferenceException: Object reference not set to an instance of an object.
+   at CommandLine.Core.InstanceBuilder.<>c__DisplayClass0_1`1.<Build>b__16()
+   at CommandLine.Core.InstanceBuilder.<>c__DisplayClass0_0`1.<Build>b__5()
+   at CommandLine.Parser.ParseArguments[T](IEnumerable`1 args)
+   at ParkingManagementClient.ClientApplication.Run(String[] args) in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\ClientApplication.cs:line 19
+   at ParkingManagementClient.Program.Main(String[] args) in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\Program.cs:line 17
+2019-03-09 18:09:00.520 +02:00 [FTL] System.NullReferenceException: Object reference not set to an instance of an object.
+   at CommandLine.Core.InstanceBuilder.<>c__DisplayClass0_1`1.<Build>b__16()
+   at CommandLine.Core.InstanceBuilder.<>c__DisplayClass0_0`1.<Build>b__5()
+   at CommandLine.Parser.ParseArguments[T](IEnumerable`1 args)
+   at ParkingManagementClient.ClientApplication.Run(String[] args) in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\ClientApplication.cs:line 19
+   at ParkingManagementClient.Program.Main(String[] args) in C:\Nikiforov\dev\xls-to-parking-management\ParkingManagementClient\Program.cs:line 17
