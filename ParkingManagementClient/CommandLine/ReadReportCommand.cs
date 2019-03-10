@@ -29,13 +29,27 @@ namespace ParkingManagement.CommandLine
             var excel = new ExcelQueryFactory(sourceFile.FullName);
             //TODO: Refactor this mess
             var names = excel.GetWorksheetNames().ToArray();
+            var dict = new Dictionary<int, (string start, string finish)>{
+                [0] = ("B4", "P48"),
+                [1] = ("B4", "P96"),
+                [2] = ("B4", "P371"),
+                [3] = ("B4", "P196"),
+                [4] = ("B4", "P210")
+            };
+            var dict2 = new Dictionary<int, int>{
+                [0] = 2,
+                [1] = 2,
+                [2] = 2,
+                [3] = 2,
+                [4] = 1
+            };
             for (int name_i = 0; name_i < names.Length; name_i++)
             {
                 logger.Information($"================= {names[name_i]} =================");
-                var clients = excel.WorksheetRangeNoHeader("B4", "Q48", names[name_i]);
+                var clients = excel.WorksheetRangeNoHeader(dict[name_i].start, dict[name_i].finish, names[name_i]);
                 int baseIndex = 3;
                 int shift = 4;
-                int numberOfRecordsToRead = 2;
+                int numberOfRecordsToRead = dict2[name_i];
 
                 List<Client> processedClients = new List<Client>();
                 foreach (var row in clients)
@@ -65,8 +79,6 @@ namespace ParkingManagement.CommandLine
                     client.VerifyRecords();
 
                     processedClients.Add(client);
-
-                    // logger.Information(client.ToString());
                 }
                 var clientWithErrors = processedClients.Where(c => c.Records.Any(r => !r.IsValid));
                 foreach (var err_client in clientWithErrors)
@@ -89,7 +101,7 @@ namespace ParkingManagement.CommandLine
                 sb.AppendLine($"Client: {FullName}-{Id}");
                 foreach (var record in Records)
                 {
-                    sb.AppendLine($"Record:{System.Environment.NewLine}{record}");
+                    // sb.AppendLine($"Record:{System.Environment.NewLine}{record}");
                 }
                 return sb.ToString();
             }
@@ -100,13 +112,21 @@ namespace ParkingManagement.CommandLine
                 Records[0].IsValid = true;
                 for (int i = Records.Count - 1; i >= 1; i--)
                 {
-                    var r1 = Records[i];
-                    var r2 = Records[i - 1];
-                    var r1Debt = Double.Parse(r1.Debt);
-                    var r1Fee = Double.Parse(r1.Fee);
-                    var r2Debt = Double.Parse(r2.Debt);
-                    var r1PaymentAmount = Double.Parse(r1.PaymentAmount);
-                    r1.IsValid = r1Debt == (r2Debt - r1Fee + r1PaymentAmount);
+                    try
+                    {
+                        var r1 = Records[i];
+                        var r2 = Records[i - 1];
+                        var r1Debt = Double.Parse(r1.Debt);
+                        var r1Fee = Double.Parse(r1.Fee);
+                        var r2Debt = Double.Parse(r2.Debt);
+                        var r1PaymentAmount = Double.Parse(r1.PaymentAmount);
+                        r1.IsValid = r1Debt == (r2Debt - r1Fee + r1PaymentAmount);
+                    }
+                    catch (System.Exception)
+                    {
+                        Records[i].IsValid = false;
+                    }
+                    
                 }
             }
         }

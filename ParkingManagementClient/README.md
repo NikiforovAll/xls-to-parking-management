@@ -9,7 +9,7 @@
 * Read from source file
 * Add help support for command line
 * Add usage examples
-
+* Issue with formulas!!
 ## Sources
 
 * <https://stackoverflow.com/questions/3935331/how-to-implement-a-configurationsection-with-a-configurationelementcollection>
