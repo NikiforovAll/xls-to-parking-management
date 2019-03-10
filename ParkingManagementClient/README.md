@@ -17,5 +17,6 @@
 * <https://github.com/commandlineparser/commandline>
   * command line parser
 * <https://autofaccn.readthedocs.io/en/latest/register/registration.html>
+  * autofac
 * https://social.technet.microsoft.com/wiki/contents/articles/35761.c-dependency-injection-in-console-application.aspx
   * (TODO:) working with repository and IoC

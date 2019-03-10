@@ -15,7 +15,6 @@ namespace ParkingManagementClient
             {
                 var app = scope.Resolve<IApplication>();
                 app.Run(args);
-                Console.Read();
             }
         }
     }
