@@ -1,6 +1,6 @@
 namespace ParkingManagement.CommandLine
 {
-    interface ICommand
+    public interface ICommand
     {
         void Execute();
     }

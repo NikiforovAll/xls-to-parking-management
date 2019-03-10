@@ -5,7 +5,7 @@
 * Configuration - ✓
 * Logger - ✓
 * IoC Approach - ✓
-* command line framework
+* command line framework - ✓
 * Read from source file
 * Add help support for command line
 * Add usage examples

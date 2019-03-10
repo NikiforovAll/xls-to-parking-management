@@ -10,17 +10,21 @@ namespace ParkingManagementClient
     public class ClientApplication : IApplication, IStartable
     {
         private static ILogger _logger;
-        public ClientApplication(ILogger logger)
+        private readonly ICommandFactory _commandFactory;
+
+        public ClientApplication(ILogger logger, ICommandFactory commandFactory)
         {
             _logger = logger;
+            _commandFactory = commandFactory;
         }
         public void Run(string[] args)
         {
-            var result = Parser.Default.ParseArguments<ReadReportCommand>(args)
+            var result = Parser.Default.ParseArguments<ReadReportOptions>(args)
                 .MapResult(
-                (ReadReportCommand opts) =>
+                (ReadReportOptions opts) =>
                 {
-                    opts.Execute();
+                    var command = _commandFactory.CreateCommand(opts.Command, opts);
+                    command.Execute();
                     return 0;
                 },
                 errs => throw new ArgumentException("Arguments are not parsed. Please see --help information")
