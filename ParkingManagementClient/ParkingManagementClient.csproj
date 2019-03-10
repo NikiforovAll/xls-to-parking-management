@@ -20,4 +20,10 @@
   <ItemGroup>
     <None Include="$(ProjectDir)\app.config" CopyToOutputDirectory="PreserveNewest" LinkBase="config\" />
   </ItemGroup>
+  <PropertyGroup>
+		<Version>0.1.0</Version>
+		<Authors>Alexey Nikiforov</Authors>
+		<Copyright>© Alexey Nikiforov</Copyright>
+		<RepositoryType>git</RepositoryType>
+	</PropertyGroup>
 </Project>
