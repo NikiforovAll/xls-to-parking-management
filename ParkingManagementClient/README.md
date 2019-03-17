@@ -9,8 +9,8 @@
 * Read from source file
 * Add help support for command line
 * Add usage examples
-* Consider to use configuration: arguments over config file
-
+* Add ReadReportCommand configuration
+* Add output file result of operation (not logger)
 * Issue with formulas!!
 ## Sources
 

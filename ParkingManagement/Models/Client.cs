@@ -30,10 +30,10 @@ namespace ParkingManagement
             {
                 var r1 = Records[i];
                 var r2 = Records[i - 1];
-                var r1Debt = Double.Parse(r1.Debt);
-                var r1Fee = Double.Parse(r1.Fee);
-                var r2Debt = Double.Parse(r2.Debt);
-                var r1PaymentAmount = Double.Parse(r1.PaymentAmount);
+                var r1Debt = r1.Debt;
+                var r1Fee = r1.Fee;
+                var r2Debt = r2.Debt;
+                var r1PaymentAmount = r1.PaymentAmount;
                 r1.IsValid = r1Debt == (r2Debt - r1Fee + r1PaymentAmount);
             }
         }

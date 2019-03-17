@@ -1,8 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net461</TargetFrameworks>
 	</PropertyGroup>
 	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="8.0.0" />
 		<PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+		<PackageReference Include="linqtoexcel" Version="1.11.0" />
 	</ItemGroup>
 </Project>

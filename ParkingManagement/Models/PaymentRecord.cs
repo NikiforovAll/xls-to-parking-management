@@ -7,9 +7,9 @@ namespace ParkingManagement
     {
         private static PropertyInfo[] _PropertyInfos = null;
 
-        public string Debt { get; set; }
-        public string Fee { get; set; }
-        public string PaymentAmount { get; set; }
+        public decimal Debt { get; set; }
+        public decimal Fee { get; set; }
+        public decimal PaymentAmount { get; set; }
 
         public bool IsValid { get; set; }
         public string PaymentDate { get; set; }

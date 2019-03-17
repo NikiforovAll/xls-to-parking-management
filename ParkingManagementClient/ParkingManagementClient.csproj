@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="autofac" Version="4.9.1" />
+    <PackageReference Include="automapper" Version="8.0.0" />
     <PackageReference Include="CommandLineParser" Version="2.4.3" />
     <PackageReference Include="linqtoexcel" Version="1.11.0" />
     <PackageReference Include="Serilog" Version="2.8.0" />
@@ -24,6 +25,7 @@
     <None Include="$(ProjectDir)\app.config" CopyToOutputDirectory="PreserveNewest" LinkBase="config\" />
   </ItemGroup>
   <PropertyGroup>
+    <!-- <RestoreProjectStyle>PackageReference</RestoreProjectStyle> -->
 		<Version>0.1.0</Version>
 		<Authors>Alexey Nikiforov</Authors>
 		<Copyright>© Alexey Nikiforov</Copyright>

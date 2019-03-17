@@ -38,7 +38,7 @@ namespace ParkingManagementClient
         private static void UnhandledExceptionTrapper(object sender, UnhandledExceptionEventArgs eventArgs)
         {
             _logger.Fatal(eventArgs.ExceptionObject.ToString());
-            Environment.Exit(1);
+            //Environment.Exit(1);
         }
     }
 }

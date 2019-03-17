@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using Autofac;
+using AutoMapper;
 using ParkingManagement;
 using ParkingManagement.CommandLine;
 using Serilog;
@@ -16,6 +18,8 @@ namespace ParkingManagementClient
                 .AddLogger()
                 .AddStartupHandler()
                 .AddFileConfig()
+                .AddParkingManagementServices()
+                .AddAutoMapperMappings()
                 .RegisterCommands();
             return builder.Build();
         }
@@ -49,6 +53,39 @@ namespace ParkingManagementClient
             builder.RegisterType<ClientApplication>()
                 .As<IStartable>()
                 .SingleInstance();
+            return builder;
+        }
+
+        public static ContainerBuilder AddParkingManagementServices(this ContainerBuilder builder)
+        {
+            builder
+                .RegisterType<ClientManager>().As<ClientManager>();
+            builder
+                .RegisterType<PaymentRecordManager>().As<PaymentRecordManager>();
+            return builder;
+        }
+
+        public static ContainerBuilder AddAutoMapperMappings(this ContainerBuilder builder)
+        {
+            var assemblies = AppDomain.CurrentDomain.GetAssemblies();
+            builder.RegisterAssemblyTypes(assemblies)
+                .Where(t => typeof(Profile).IsAssignableFrom(t) && !t.IsAbstract && t.IsPublic)
+                .As<Profile>();
+            builder.Register(c => new MapperConfiguration(cfg =>
+            {
+                foreach (var profile in c.Resolve<IEnumerable<Profile>>())
+                {
+                    cfg.AddProfile(profile);
+                }
+            })).AsSelf().SingleInstance();
+
+            builder.Register(tempContext =>
+            {
+                var ctx = tempContext.Resolve<IComponentContext>();
+                var config = ctx.Resolve<MapperConfiguration>();
+                return config.CreateMapper();
+            }).As<IMapper>();
+
             return builder;
         }
 
