@@ -11,6 +11,7 @@
 * Add usage examples
 * Consider to use configuration: arguments over config file
 
+* Issue with formulas!!
 ## Sources
 
 * <https://stackoverflow.com/questions/3935331/how-to-implement-a-configurationsection-with-a-configurationelementcollection>
