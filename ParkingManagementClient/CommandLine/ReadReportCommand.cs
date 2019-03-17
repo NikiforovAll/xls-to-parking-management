@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 using System;
-
+using ParkingManagement;
 namespace ParkingManagement.CommandLine
 {
     public class ReadReportCommand : ICommand
@@ -75,67 +75,6 @@ namespace ParkingManagement.CommandLine
                 }
             }
         }
-        private static PropertyInfo[] _PropertyInfos = null;
-        class Client
-        {
-            public string FullName { get; set; }
-            public string Id { get; set; }
-
-            public List<PaymentRecord> Records { get; set; }
-
-            public override string ToString()
-            {
-                var sb = new StringBuilder();
-                sb.AppendLine($"Client: {FullName}-{Id}");
-                foreach (var record in Records)
-                {
-                    sb.AppendLine($"Record:{System.Environment.NewLine}{record}");
-                }
-                return sb.ToString();
-            }
-
-            public void VerifyRecords()
-            {
-                bool hasError = false;
-                Records[0].IsValid = true;
-                for (int i = Records.Count - 1; i >= 1; i--)
-                {
-                    var r1 = Records[i];
-                    var r2 = Records[i - 1];
-                    var r1Debt = Double.Parse(r1.Debt);
-                    var r1Fee = Double.Parse(r1.Fee);
-                    var r2Debt = Double.Parse(r2.Debt);
-                    var r1PaymentAmount = Double.Parse(r1.PaymentAmount);
-                    r1.IsValid = r1Debt == (r2Debt - r1Fee + r1PaymentAmount);
-                }
-            }
-        }
-        class PaymentRecord
-        {
-            public string Debt { get; set; }
-            public string Fee { get; set; }
-            public string PaymentAmount { get; set; }
-
-            public bool IsValid { get; set; }
-            public string PaymentDate { get; set; }
-
-            public override string ToString()
-            {
-                if (_PropertyInfos == null)
-                    _PropertyInfos = this.GetType().GetProperties();
-
-                var sb = new StringBuilder();
-
-                foreach (var info in _PropertyInfos)
-                {
-                    var value = info.GetValue(this, null) ?? "(null)";
-                    sb.AppendLine(info.Name + ": " + value.ToString());
-                }
-
-                return sb.ToString();
-            }
-        }
-
         private string FillIfEmpty(string source)
         {
             return string.IsNullOrEmpty(source) ? "0" : source;

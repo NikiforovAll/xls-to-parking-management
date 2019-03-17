@@ -9,6 +9,7 @@
 * Read from source file
 * Add help support for command line
 * Add usage examples
+* Consider to use configuration: arguments over config file
 
 ## Sources
 
